@@ -35,12 +35,12 @@ const SearchField = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex flex-col items-center space-y-4">
       {/* Search input */}
       <input
-        className="bg-gray-50 border border-gray-300 text-sm w-full indent-2 p-2.5 outline-none focus:border-sky-500 focus:ring-2 rounded-tl rounded-bl"
+        className="bg-gray-100 border border-gray-300 text-sm w-full p-3 outline-none focus:border-blue-500 focus:ring-2 rounded-lg"
         type="search"
-        placeholder="Search for images"
+        placeholder="Discover amazing images..."
         value={searchValue}
         onChange={handleInputChange}
         onKeyDown={handleEnterSearch}
@@ -50,9 +50,9 @@ const SearchField = () => {
       <button
         onClick={handleButtonSearch}
         disabled={!searchValue}
-        className="bg-sky-500 px-6 py-2.5 text-white rounded-tr rounded-br focus:ring-2 focus:ring-blue-300 disabled:bg-gray-400"
+        className="bg-gradient-to-r from-indigo-500 to-purple-500 px-8 py-3 text-white rounded-full focus:ring-2 focus:ring-blue-300 disabled:bg-gray-400 transform hover:scale-105 transition-transform duration-300 ease-in-out"
       >
-        Search
+        Explore
       </button>
     </div>
   );
